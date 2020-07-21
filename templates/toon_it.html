@@ -53,14 +53,14 @@ body {font-family: "Raleway", Arial, sans-serif}
   <!-- Photo Grid -->
   <div class="w3-row" id="gallery" style="background-image: linear-gradient(to right,#E5E4E2,#D1D0CE);">
     <div class="w3-half">
-      <img src="img/toon1.jpg" style="width:100%;height:640px;padding:20px">
-      <img src="img/toon2.jpg" style="width:100%;height:640px;padding:20px">
-      <img src="img/toon3.jpg" style="width:100%;height:640px;padding:20px">
+      <img src="{{url_for('static',filename='img/toon1.jpg')}}" style="width:100%;height:640px;padding:20px">
+      <img src="{{url_for('static',filename='img/toon2.jpg')}}" style="width:100%;height:640px;padding:20px">
+      <img src="{{url_for('static',filename='img/toon3.jpg')}}img/toon3.jpg" style="width:100%;height:640px;padding:20px">
     </div>
 
     <div class="w3-half">
-      <img src="/img/eg4.jpg" style="width:100%;padding:20px">
-      <img src="/img/eg3.jpg" style="width:100%;padding:20px">
+      <img src="{{url_for('static',filename='img/eg4.jpg')}}" style="width:100%;padding:20px">
+      <img src="{{url_for('static',filename='img/toon3.jpg')}}" style="width:100%;padding:20px">
     </div>
   </div>
   
