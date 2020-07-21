@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<title>Toon It</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<style>
+body {font-family: "Raleway", Arial, sans-serif}
+.w3-row img {margin-bottom: -8px}
+.grid-container {
+  grid-gap: 50px;
+}
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  align-items: center;
+}
+.btn:hover {
+  background-color: RoyalBlue;
+}
+.button {font-size: 8px;}
+</style>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+  <!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+    <a href="#download" class="w3-left w3-button w3-white">Toon It</a>
+    <a href="#gallery" class="w3-left w3-button w3-white">Gallery</a>
+    <a href="#about" class="w3-right w3-button w3-white">About</a>
+    <a href="#download" class="w3-right w3-button w3-white">Download App</a>
+  </header>
+  <div class="w3-padding-64 w3-center" style="height:200%;background-image: linear-gradient(to bottom,grey,black);padding-top: 20% !important;padding-bottom: 20% !important;">
+    <form class="input-group" method="POST" action="/upload" enctype="multipart/form-data">
+      <div class="custom-file">
+          <input type="file" class="custom-file-input" name="file" id="file">
+          <label class="custom-file-label" for="file">Choose file</label>
+      </div>
+      <div class="input-group-append" style="margin-left: 1%;margin-right: 2%">
+          <button class="btn button" type="submit">Upload</button>
+      </div>
+    </form>
+  </div>
+  <!-- Photo Grid -->
+  <div class="w3-row" id="gallery" style="background-image: linear-gradient(to right,#E5E4E2,#D1D0CE);">
+    <div class="w3-half">
+      <img src="/home/francis/Toon It/img/toon3.jpg" style="width:100%;height:640px;padding:20px">
+      <img src="/home/francis/Toon It/img/toon2.jpg" style="width:100%;height:640px;padding:20px">
+      <img src="/home/francis/Toon It/img/toon1.jpg" style="width:100%;height:640px;padding:20px">
+    </div>
+
+    <div class="w3-half">
+      <img src="/home/francis/Toon It/img/eg4.jpg" style="width:100%;padding:20px">
+      <img src="/home/francis/Toon It/img/eg3.jpg" style="width:100%;padding:20px">
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer / About Section -->
+<div class="w3-padding-64 w3-center" id="download" style="background-color:grey;">
+  <h2>Download App</h2>
+  <img src="/w3images/boy.jpg" class="w3-image w3-padding-32" width="300" height="300">
+  <div>
+  <button class="btn"><i class="fa fa-download"></i>Download App</button>
+  </div>
+</div>
+<footer class="w3-padding-64 w3-center" id="about" style="background-color:#2C3539;">
+  <h2>About</h2>
+  <p> Toon It..</p>
+</footer>
+ 
+</body>
+</html>
