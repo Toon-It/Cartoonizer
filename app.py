@@ -63,7 +63,6 @@ def cartoonize(img_name, load_folder, save_folder, model_path):
 
 model_path = "saved_models"
 UPLOAD_FOLDER = "static/upload/"
-img_name = "kurian_mecpodcast.jpg"
 save_folder = "static/cartoonized_images/"
 if not os.path.exists(save_folder):
     os.mkdir(save_folder)
@@ -76,10 +75,11 @@ def home():
         if image_file:
             print(image_file)
             image_location = os.path.join(UPLOAD_FOLDER, image_file.filename)
+            color_location = os.path.join(save_folder, image_file.filename)
             image_file.save(image_location)
             img_name = image_file.filename
             cartoonize(img_name,UPLOAD_FOLDER, save_folder, model_path)
-            return render_template("toon_it.html")
+            return render_template("toon_it.html", color_loc=img_name)
     return render_template("toon_it.html")
 
 
