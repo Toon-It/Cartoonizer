@@ -39,17 +39,21 @@ body {font-family: "Raleway", Arial, sans-serif}
     <a href="#about" class="w3-right w3-button w3-white">About</a>
     <a href="#download" class="w3-right w3-button w3-white">Download App</a>
   </header>
+  
+  
   <div class="w3-padding-64 w3-center" style="height:200%;background-image: linear-gradient(to bottom,grey,black);padding-top: 20% !important;padding-bottom: 20% !important;">
-    <form class="input-group" method="POST" action="/upload" enctype="multipart/form-data">
-      <div class="custom-file">
-          <input type="file" class="custom-file-input" name="file" id="file">
+    <form class="input-group" method="POST" enctype="multipart/form-data">
+      <div>
+          <input type="file" class="custom-file-input" name="image" id="file">
           <label class="custom-file-label" for="file">Choose file</label>
       </div>
       <div class="input-group-append" style="margin-left: 1%;margin-right: 2%">
-          <button class="btn button" type="submit">Upload</button>
+         <input type=submit value=Upload>
       </div>
     </form>
   </div>
+  <h3>Prediction: {{predictions}}</h3>
+  
   <!-- Photo Grid -->
   <div class="w3-row" id="gallery" style="background-image: linear-gradient(to right,#E5E4E2,#D1D0CE);">
     <div class="w3-half">
