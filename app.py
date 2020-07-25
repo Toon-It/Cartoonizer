@@ -8,16 +8,6 @@ from tqdm import tqdm
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-# UPLOAD_FOLDER = "static/upload/"
-# @app.route("/", methods=["GET", "POST"])
-# def home():
-#     if request.method == "POST":
-#         image_file = request.files["image"]
-#         if image_file:
-#             image_location = os.path.join(UPLOAD_FOLDER, image_file.filename)
-#             image_file.save(image_location)
-#             return render_template('toon_it.html', predictions=1)
-#     return render_template('toon_it.html', predictions=0)
 
 
 def resize_crop(image):
@@ -78,11 +68,10 @@ def home():
             color_location = os.path.join(save_folder, image_file.filename)
             image_file.save(image_location)
             img_name = image_file.filename
-            cartoonize(img_name,UPLOAD_FOLDER, save_folder, model_path)
+            cartoonize(img_name, UPLOAD_FOLDER, save_folder, model_path)
             return render_template("toon_it.html", color_loc=img_name)
     return render_template("toon_it.html")
 
 
 if __name__ == "__main__":
-    
     app.run(debug=True)
