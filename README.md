@@ -1,3 +1,7 @@
+# Cartoonize images and videos
+
+- Web app to cartoonize images
+
 <img src='paper/shinjuku.jpg' align="left" width=1000>
 
 <br><br><br>
@@ -78,7 +82,7 @@ https://drive.google.com/file/d/1j0jDENjdwxCDb36meP6-u5xDBzmKBOjJ/view?usp=shari
 We are grateful for the help from Lvmin Zhang and Style2Paints Research
 
 ## License
-Copyright (C) Xinrui Wang, Jinze Yu. All rights reserved. Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+This project is Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), due to use of citated code for our research.
 
 ## Citation
 
@@ -92,9 +96,3 @@ month = {June},
 year = {2020}
 }
 
-
-# 中文社区
-
-我们有一个除了技术什么东西都聊的以技术交流为主的宇宙超一流二次元相关技术交流吹水群“纸片协会”。如果你一次加群失败，可以多次尝试。
-
-    纸片协会总舵：184467946
