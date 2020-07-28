@@ -79,7 +79,7 @@
         </script>
         </div>
         <div class="col-md-5 col-sm-12  h-25">
-          <img src="/home/francis/Toon It/assets/cartoon.png" alt="Tooned" />
+          <img src="{{url_for('static',filename='assets/cartoon.png')}}" alt="Tooned" />
         </div>
       </div>
     </div>
@@ -98,9 +98,9 @@
               </p>
               <div class="row"> 
                 <div class="column">
-                  <img src="../assets/toon1.jpg" style="width:100%">
-                  <img src="/home/francis/Toon It/assets/toon2.jpg" style="width:100%">
-                  <img src="/home/francis/Toon It/assets/toon3.jpg" style="width:100%">
+                  <img src="{{url_for('static',filename='img/toon1.jpg')}}"" style="width:100%">
+                  <img src="{{url_for('static',filename='img/toon2.jpg')}}"" style="width:100%">
+                  <img src="{{url_for('static',filename='img/toon3.jpg')}}"" style="width:100%">
                   <img src="/home/francis/Toon It/assets/toon4.jpg" style="width:100%">
                   <img src="/home/francis/Toon It/assets/toon5.jpg" style="width:100%">
                   <img src="/home/francis/Toon It/assets/toon6.jpg" style="width:100%">
@@ -213,7 +213,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="./main.js"></script>
+  <script src="{{url_for('static', filename='main.jss') }}"></script>
 </body>
 
 </html>

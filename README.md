@@ -2,6 +2,14 @@
 
 - Web app to cartoonize images
 
+## Installation
+
+```
+python3 -m pip install -r requirements.txt
+python3 app.py
+(tada webapp is up)
+```
+
 <img src='paper/shinjuku.jpg' align="left" width=1000>
 
 <br><br><br>
