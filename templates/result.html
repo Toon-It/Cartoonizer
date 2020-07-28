@@ -6,8 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Toon It</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
   <link rel="stylesheet" href="{{url_for('static', filename='css/Style.css')}}" />
@@ -88,6 +87,7 @@ line-height: 25px;
 </head>
   <body style="background-color: tomato;">
   <div style="text-align: center;">
+    <img src="static/cartoonized_images/{{color_loc}}" alt="">
     <img src="{{url_for('static',filename='img/toon1.jpg')}}">
     <div class="container" style="text-align: center;">
       
