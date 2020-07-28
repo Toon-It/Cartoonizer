@@ -69,8 +69,8 @@ def home():
             image_file.save(image_location)
             img_name = image_file.filename
             cartoonize(img_name, UPLOAD_FOLDER, save_folder, model_path)
-            return render_template("toon_it.html", color_loc=img_name)
-    return render_template("toon_it.html")
+            return render_template("result.html", color_loc=img_name)
+    return render_template("index_toonit.html")
 
 
 if __name__ == "__main__":
