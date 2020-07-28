@@ -40,6 +40,7 @@ def cartoonize(img_name, load_folder, save_folder, model_path):
     saver.restore(sess, tf.train.latest_checkpoint(model_path))
     name_list = os.listdir(load_folder)
     load_path = os.path.join(load_folder, img_name)
+    print(load_path)
     save_path = os.path.join(save_folder, img_name)
     image = cv2.imread(load_path)
     image = resize_crop(image)
@@ -60,6 +61,10 @@ if not os.path.exists(save_folder):
 
 @app.route("/", methods=["GET", "POST"])
 def home():
+    return render_template("index_toonit.html")
+
+@app.route("/upload", methods=["POST"])
+def upload():
     if request.method == "POST":
         image_file = request.files["image"]
         if image_file:
@@ -70,8 +75,9 @@ def home():
             img_name = image_file.filename
             cartoonize(img_name, UPLOAD_FOLDER, save_folder, model_path)
             return render_template("result.html", color_loc=img_name)
-    return render_template("index_toonit.html")
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+    # img_name = 'Mallu.jpg'
+    # cartoonize(img_name, UPLOAD_FOLDER, save_folder, model_path)
