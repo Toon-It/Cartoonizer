@@ -2,7 +2,8 @@
 test_code/__pycache__/
 train_code/vgg19_no_fc.npy
 .vscode/
-
+static/upload/
+static/cartoonized_images/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
