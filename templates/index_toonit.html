@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Toon It</title>
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
   <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}" />
@@ -25,7 +27,7 @@
     <div class="container-fluid p-0" style="margin-bottom: 50px;margin-top: 60px;">
       <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
-          <i class="fas fa-book-reader fa-2x mx-3"></i>Toon It</a>
+          <i class="fas fa-pen fa-2x mx-3"></i>Toon It</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
           aria-label="Toggle navigation">
           <i class="fas fa-align-right text-light"></i>
@@ -59,20 +61,17 @@
           <p>
             Browse your image file to cartoonize your image
           </p>
-          <form method="POST" action="/upload" enctype="multipart/form-data">
             <div class="input-group">
-              <div class="custom-file">
-                <input type="file" name="image" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-                <label class="custom-file-label" for="inputGroupFile04">Choose file for colourize</label>
-              </div>
-              <!-- <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" id="inputGroupFileAddon04">Upload</button>
-              </div> -->
-              <div class="input-group-append" style="margin-left: 1%;margin-right: 2%">
-                <button class="btn button" type="submit">Upload</button>
+              <form method="POST" action="/upload" enctype="multipart/form-data">
+                <div class="custom-file">
+                  <input type="file" name="image" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                  <label class="custom-file-label" for="inputGroupFile04">Browse your image file to cartoonize your image</label>
+                </div>
+                <div class="input-group-append" style="margin-left: 1%;margin-right: 2%">
+                  <button class="btn button" type="submit" id="inputGroupFileAddon04">Upload</button>
+                </div>
+              </form>
             </div>
-            </div>
-          </form>
           <script>
             $('#inputGroupFile04').on('change',function(){
                 //get the file name
