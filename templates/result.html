@@ -18,27 +18,6 @@
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=undefined&product=inline-share-buttons' async='async'></script>
 <style>
-  .big-btn{
-padding: 10px 0px 11px 0px;
-width: 215px;
-margin-top:5px;
-}
-
-.big-btn i{
-font-size: 65px;
-margin-right: 0px !important;
-}
-.big-btn strong{
-font-size: 25px;
-text-shadow: 1px 2px 0px #34659B;
-color: #fff;
-line-height: 24px;
-}
-.big-btn .btn-text{
-margin-top:6px;
-}
-
-.big-btn small{font-size: 75%;}
 
 .android-btn{
 
@@ -67,24 +46,56 @@ color: #fff;
 line-height: 24px;
 }
 
-.windows-btn{
-background-color:#008A00;
-width: 235px;
-padding: 13px 5px 13px 10px;
-border-color: #055805;
+
+* {
+  box-sizing: border-box;
 }
 
-.windows-btn:hover{
-background-color: #008A00;
+body {
+  font-family: 'Lato';
+  text-align: center;
+  margin: 0;
 }
-.windows-btn .btn-text{
-text-shadow: none;
-font-size: 26px;
-line-height: 25px;
+
+.centered {
+  width: 80vw;
+  height: 70vh;
+  margin: 15vh auto;
+  background:linear-gradient(to bottom,tomato,#dd2476);
+  padding-top: 20px;
 }
 
 </style>  
 </head>
+
+<h1 style="align-items: center;margin-top: 2%;color: white;">Here is Your Cartoonized Image</h1>
+<body style="background:linear-gradient(to bottom,#dd2476,tomato);">
+
+
+<div class="centered">
+
+
+  <img src="static/cartoonized_images/{{color_loc}}" style="height:70%;width: auto;">
+  <div class="container" style="text-align: center;">
+    
+    <div class="container" style="padding-top: 30px;">
+      <button type="button" class="btn btn-lg btn-outline-dark">Download App</button>
+      <button type="button" class="btn btn-lg btn-outline-dark">Download Image</button>
+    </div>
+    <div style="padding-top: 10px;"> 
+      <button type="button" class="btn btn-lg btn-outline-dark">
+      <div>  
+        <small>Click here to</small>
+      </div>
+      <div>
+        <strong>Go Back</strong></button>
+    </div>  
+      </div>
+  </div>
+</div>
+</body>
+</html>
+
   <body style="background-color: tomato;">
   <div style="text-align: center;">
     <img src="static/cartoonized_images/{{color_loc}}" alt="">
