@@ -80,16 +80,20 @@ body {
     
     <div class="container" style="padding-top: 30px;">
       <button type="button" class="btn btn-lg btn-outline-dark">Download App</button>
+      <a href="static/cartoonized_images/{{color_loc}}" download="result.jpg">
       <button type="button" class="btn btn-lg btn-outline-dark">Download Image</button>
+      </a>
     </div>
     <div style="padding-top: 10px;"> 
+      <a href="{{ url_for('.home') }}">
       <button type="button" class="btn btn-lg btn-outline-dark">
       <div>  
         <small>Click here to</small>
       </div>
       <div>
         <strong>Go Back</strong></button>
-    </div>  
+      </div> 
+    </a> 
       </div>
   </div>
 </div>
