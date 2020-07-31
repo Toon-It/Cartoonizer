@@ -1,3 +1,4 @@
+toon_it/
 .env/
 test_code/__pycache__/
 train_code/vgg19_no_fc.npy
