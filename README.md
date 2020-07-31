@@ -1,6 +1,8 @@
-# Cartoonize images and videos
+# Toon-it
 
-- Web app to cartoonize images
+This is a web app to make real world images to cartoon like artist drawn images. This work is based on 2020 CVPR paper: Learning to Cartoonize Using White-box Cartoon Representations and is Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), due to use of citated code of original research.
+
+**Technologies used: Tensorflow, Flask, HTML**
 
 ## Installation
 
