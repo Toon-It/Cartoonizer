@@ -8,8 +8,10 @@ This is a web app to make real world images to cartoon like artist drawn images.
 
 ```
 python3 -m pip install -r requirements.txt
-python3 app.py
-(tada webapp is up)
+python3 main.py
+(tada webapp is running in =>
+
+localhost:5000/)
 ```
 
 <img src='paper/shinjuku.jpg' align="left" width=1000>
