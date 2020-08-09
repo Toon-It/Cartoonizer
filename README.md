@@ -14,6 +14,8 @@ python3 main.py
 localhost:5000/)
 ```
 
+- [Application](https://colab.research.google.com/github/margaretmz/CartoonGAN-e2e-tflite-tutorial/blob/master/ml/CartoonGAN_TFLite_Fixed_Shaped.ipynb)
+
 <img src='paper/shinjuku.jpg' align="left" width=1000>
 
 <br><br><br>
