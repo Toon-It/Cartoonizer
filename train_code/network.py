@@ -109,7 +109,7 @@ def disc_bn(x, scale=1, channel=32, is_training=True,
             x = slim.batch_norm(x, is_training=is_training, center=True, scale=True)
             x = tf.nn.leaky_relu(x)
 
-        if patch == True:
+        if patch is True:
             x = slim.convolution2d(x, 1, [1, 1], activation_fn=None)
         else:
             x = tf.reduce_mean(x, axis=[1, 2])
@@ -133,7 +133,7 @@ def disc_sn(x, scale=1, channel=32, patch=True, name='discriminator', reuse=Fals
             x = tf.nn.leaky_relu(x)
         
         
-        if patch == True:
+        if patch is True:
             x = layers.conv_spectral_norm(x, 1, [1, 1], name='conv_out'.format(idx))
             
         else:
@@ -155,7 +155,7 @@ def disc_ln(x, channel=32, is_training=True, name='discriminator', patch=True, r
             x = tf.contrib.layers.layer_norm(x)
             x = tf.nn.leaky_relu(x)
 
-        if patch == True:
+        if patch is True:
             x = slim.convolution2d(x, 1, [1, 1], activation_fn=None)
         else:
             x = tf.reduce_mean(x, axis=[1, 2])
