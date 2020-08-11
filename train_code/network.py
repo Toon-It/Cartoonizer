@@ -6,10 +6,7 @@ Source code for 'Learning to Cartoonize Using White-Box Cartoon Representations'
 
 import layers
 import tensorflow as tf
-import numpy as np
 import tensorflow.contrib.slim as slim
-
-from tqdm import tqdm
 
 
 
