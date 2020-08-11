@@ -122,7 +122,7 @@ def simple_superpixel(batch_image, seg_num=200):
 
 
 def load_image_list(data_dir):
-    name_list = list()
+    name_list = []
     for name in os.listdir(data_dir):
         name_list.append(os.path.join(data_dir, name))
     name_list.sort()
