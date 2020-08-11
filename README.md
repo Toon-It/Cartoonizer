@@ -1,6 +1,6 @@
 # Toon-it
 
-This is a web app to make real world images to cartoon like artist drawn images. This work is based on 2020 CVPR paper: Learning to Cartoonize Using White-box Cartoon Representations and is Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), due to use of citated code of original research.
+This is a web app to make real world images to cartoon like artist drawn images. This work is based on 2020 CVPR paper: Learning to Cartoonize Using White-box Cartoon Representations and is Licensed under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), due to use of citated code of original research.
 
 **Technologies used: Tensorflow, Flask, HTML**
 
@@ -13,8 +13,6 @@ python3 main.py
 
 localhost:5000/)
 ```
-
-- [Application](https://colab.research.google.com/github/margaretmz/CartoonGAN-e2e-tflite-tutorial/blob/master/ml/CartoonGAN_TFLite_Fixed_Shaped.ipynb)
 
 <img src='paper/shinjuku.jpg' align="left" width=1000>
 
@@ -94,6 +92,8 @@ https://drive.google.com/file/d/1j0jDENjdwxCDb36meP6-u5xDBzmKBOjJ/view?usp=shari
 ## Acknowledgement
 
 We are grateful for the help from Lvmin Zhang and Style2Paints Research
+
+- [Creating tflite model](https://colab.research.google.com/github/margaretmz/CartoonGAN-e2e-tflite-tutorial/blob/master/ml/CartoonGAN_TFLite_Fixed_Shaped.ipynb)
 
 ## License
 This project is Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), due to use of citated code for our research.
