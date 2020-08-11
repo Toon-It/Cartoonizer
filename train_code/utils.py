@@ -3,9 +3,6 @@ Source code for CVPR 2020 paper
 'Learning to Cartoonize Using White-Box Cartoon Representations'
 by Xinrui Wang and Jinze yu
 '''
-
-
-from scipy.ndimage import filters
 from skimage import segmentation, color
 from joblib import Parallel, delayed
 from selective_search.util import switch_color_space
