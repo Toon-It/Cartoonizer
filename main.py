@@ -51,16 +51,19 @@ def cartoonize(img_name, load_folder, save_folder, model_path):
     cv2.imwrite(save_path, output)
 
 
+# create folder for Uploading and cartoonizing images
 model_path = "saved_models"
 UPLOAD_FOLDER = "static/upload/"
 save_folder = "static/cartoonized_images/"
 if not os.path.exists(save_folder):
+    os.mkdir(UPLOAD_FOLDER)
     os.mkdir(save_folder)
 
 
 @app.route("/", methods=["GET", "POST"])
 def home():
     return render_template("index_toonit.html")
+
 
 @app.route("/upload", methods=["POST"])
 def upload():
@@ -78,5 +81,3 @@ def upload():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    # img_name = 'Mallu.jpg'
-    # cartoonize(img_name, UPLOAD_FOLDER, save_folder, model_path)
