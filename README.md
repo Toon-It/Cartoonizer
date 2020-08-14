@@ -16,7 +16,7 @@ localhost:5000/)
 
 You can look at your [demo here](https://github.com/Toon-It/Cartoonizer/blob/master/demo.md).
 
-This webapp was featured in top 5 trending projects in [MadeWithML](https://madewithml.com/projects/2125/toonit-now/)
+This webapp was featured in top 5 📈  trending projects in [MadeWithML](https://madewithml.com/projects/2125/toonit-now/)
 
 <img src='paper/shinjuku.jpg' align="left" width=1000>
 
