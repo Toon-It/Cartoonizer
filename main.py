@@ -68,6 +68,7 @@ def home():
 @app.route("/upload", methods=["POST"])
 def upload():
     if request.method == "POST":
+        # read the POST request input 
         image_file = request.files["image"]
         if image_file:
             print(image_file)
