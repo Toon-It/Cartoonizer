@@ -62,7 +62,7 @@ if not os.path.exists(save_folder):
     os.mkdir(save_folder)
 
 
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 def allowed_files(filename):
 	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -81,9 +81,12 @@ def upload():
         image_file = request.files["image"]
         if image_file and allowed_files(image_file.filename):
             print(image_file.filename)
-            image_location = os.path.join(UPLOAD_FOLDER, image_file.filename)
-            color_location = os.path.join(save_folder, image_file.filename)
-            image_file.save(image_location)
+            extension = os.path.splitext(image_file.filename)[1]
+            print(extension)
+            f_name = str(uuid.uuid4()) + extension
+            image_file.save(os.path.join(UPLOAD_FOLDER, f_name))
+            image_location = os.path.join(UPLOAD_FOLDER, f_name)
+            color_location = os.path.join(save_folder, f_name)
             img_name = image_file.filename
             cartoonize(img_name, UPLOAD_FOLDER, save_folder, model_path)
             return render_template("result.html", color_loc=img_name)
