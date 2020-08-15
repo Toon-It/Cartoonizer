@@ -62,10 +62,12 @@ if not os.path.exists(save_folder):
     os.mkdir(save_folder)
 
 
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+ALLOWED_EXTENSIONS = set(["png", "jpg", "jpeg"])
+
 
 def allowed_files(filename):
-	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -75,9 +77,9 @@ def home():
 @app.route("/upload", methods=["POST"])
 def upload():
     if request.method == "POST":
-        # read the POST request input 
-        if 'file' not in request.files:
-            flash('No file part')
+        # read the POST request input
+        if "file" not in request.files:
+            flash("No file part")
         image_file = request.files["image"]
         if image_file and allowed_files(image_file.filename):
             print(image_file.filename)
@@ -91,9 +93,8 @@ def upload():
             cartoonize(img_name, UPLOAD_FOLDER, save_folder, model_path)
             return render_template("result.html", color_loc=img_name)
         else:
-            flash('Allowed image types are -> png, jpg, jpeg, gif')
+            flash("Allowed image types are -> png, jpg, jpeg, gif")
             return redirect(request.url)
-
 
 
 if __name__ == "__main__":
