@@ -4,9 +4,11 @@ import numpy as np
 import tensorflow as tf
 import network
 import guided_filter
-from flask import Flask, render_template, request
+import uuid
+from flask import Flask, render_template, request, flash, redirect, session
 
 app = Flask(__name__)
+app.secret_key = "super secret key"
 
 
 def resize_crop(image):
@@ -60,6 +62,11 @@ if not os.path.exists(save_folder):
     os.mkdir(save_folder)
 
 
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
+
+def allowed_files(filename):
+	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 @app.route("/", methods=["GET", "POST"])
 def home():
     return render_template("index_toonit.html")
@@ -69,15 +76,21 @@ def home():
 def upload():
     if request.method == "POST":
         # read the POST request input 
+        if 'file' not in request.files:
+            flash('No file part')
         image_file = request.files["image"]
-        if image_file:
-            print(image_file)
+        if image_file and allowed_files(image_file.filename):
+            print(image_file.filename)
             image_location = os.path.join(UPLOAD_FOLDER, image_file.filename)
             color_location = os.path.join(save_folder, image_file.filename)
             image_file.save(image_location)
             img_name = image_file.filename
             cartoonize(img_name, UPLOAD_FOLDER, save_folder, model_path)
             return render_template("result.html", color_loc=img_name)
+        else:
+            flash('Allowed image types are -> png, jpg, jpeg, gif')
+            return redirect(request.url)
+
 
 
 if __name__ == "__main__":
