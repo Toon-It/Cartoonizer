@@ -50,6 +50,12 @@ def cartoonize(img_name, load_folder, save_folder, model_path):
     output = sess.run(final_out, feed_dict={input_photo: batch_image})
     output = (np.squeeze(output) + 1) * 127.5
     output = np.clip(output, 0, 255).astype(np.uint8)
+    # adding watermark to image
+    logo = cv2.imread('images/pyimage.png')
+    (h_logo, w_logo) = logo.shape[:2]
+    (h, w) = output.shape[:2]
+    print(h_logo, w_logo, h, w)
+
     cv2.imwrite(save_path, output)
 
 
