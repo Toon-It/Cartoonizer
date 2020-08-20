@@ -59,18 +59,20 @@
           <p>
             Browse your image file to cartoonize your image
           </p>
+            
+              
+          
+            <form method="POST" action="/upload" enctype="multipart/form-data ">
             <div class="input-group">
-              <form method="POST" action="/upload" enctype="multipart/form-data">
-                <div class="custom-file">
-                  <input type="file" name="image" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-                  <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
-                  <button class="btn btn-secondary" type="submit" id="inputGroupFileAddon04" style="margin-left: 1%;margin-right: 2%">Upload</button>
-                </div>
-                <!-- <div class="input-group-append">
-                  <button class="btn btn-secondary" type="submit" id="inputGroupFileAddon04" style="margin-left: 1%;margin-right: 2%">Upload</button>
-                </div> -->
-              </form>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+              </div>
+              <div class="input-group-append">
+                <button class="btn btn-secondary" type="submit" id="inputGroupFileAddon04">Upload</button>
+              </div>
             </div>
+            </form>
           <script>
             $('#inputGroupFile04').on('change',function(){
                 //get the file name
@@ -88,58 +90,46 @@
   </header>
   <main>
     <section class="section-1" id="gallery">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-md-6 col-12">
-          </div>
-          <div class="col-md-6 col-12">
-            <div class="panel text-left">
-              <h1>Gallery</h1>
+      <div class="container text-center" style="margin-top:-5%; margin-bottom: -5%;">
+        
+              <h1><b>Gallery</h1>
               <p class="pt-4">
                 Take a look at some of the cartoonized artist like images made from your own photos which you can use for free.
               </p>
               <div class="row"> 
                 <div class="column">
-                  <img src="{{url_for('static',filename='assets/toon1.jpg')}}"" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon2.jpg')}}"" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon3.jpg')}}"" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon4.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon5.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon6.jpg')}}" style="width:100%">
+                  <img src="{{url_for('static',filename='assets/toon1.jpg')}}" style="width:100%">
+                  <img src="{{url_for('static',filename='assets/toon2.jpg')}}" style="width:100%">
+                  <img src="{{url_for('static',filename='assets/toon3.jpg')}}" style="width:100%">
+                  
                 </div>
                 <div class="column">
                   <img src="{{url_for('static',filename='assets/toon7.jpg')}}" style="width:100%">
                   <img src="{{url_for('static',filename='assets/toon8.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon9.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon10.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon11.jpg')}}" style="width:100%">
                   <img src="{{url_for('static',filename='assets/toon12.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon13.jpg')}}" style="width:100%">
+                  <img src="{{url_for('static',filename='assets/toon10.jpg')}}" style="width:100%">
+                  <img src="{{url_for('static',filename='assets/toon19.jpg')}}" style="width:100%">
+                  
                 </div>  
                 <div class="column">
                   <img src="{{url_for('static',filename='assets/toon14.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon15.jpg')}}" style="width:100%">
+                  <img src="{{url_for('static',filename='assets/toon9.jpg')}}" style="width:100%">
                   <img src="{{url_for('static',filename='assets/toon16.jpg')}}" style="width:100%">
                   <img src="{{url_for('static',filename='assets/toon17.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon18.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon19.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon20.jpg')}}" style="width:100%">
                 </div>
                 <div class="column">
                   <img src="{{url_for('static',filename='assets/toon21.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon22.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon23.jpg')}}" style="width:100%">
+                  <img src="{{url_for('static',filename='assets/toon18.jpg')}}" style="width:100%">
+                  <img src="{{url_for('static',filename='assets/toon20.jpg')}}" style="width:100%">
                   <img src="{{url_for('static',filename='assets/toon24.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon25.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon26.jpg')}}" style="width:100%">
-                  <img src="{{url_for('static',filename='assets/toon27.jpg')}}" style="width:100%">
                 </div>
             </div>
           </div>
         </div>
       </div>
+    
     </section>
-    <!-- <section class="section-2 container-fluid p-0">
+     <section class="section-2 container-fluid p-0">
       <div class="cover">
         <div class="overlay"></div>
         <div class="content text-center">
@@ -158,7 +148,7 @@
           </div>
           
         </div>
-      </div> -->
+      </div> 
 
     <!--  
     </section>
@@ -214,7 +204,8 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="{{url_for('static', filename='main.jss') }}"></script>
+  <script src="{{url_for('static', filename='main.js') }}"></script>
+  
 </body>
 
 </html>

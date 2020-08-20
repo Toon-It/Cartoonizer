@@ -472,3 +472,10 @@ footer .column i + i {
   .button:hover {
     background-color: #f1f1f1;
   }
+  
+
+
+  .input-group{ margin-left: 0% !important}
+
+  @media only screen and (max-width: 600px){
+    .input-group{ margin-left: 0% !important}}
