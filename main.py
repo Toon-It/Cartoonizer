@@ -43,6 +43,7 @@ def cartoonize(img_name, load_folder, save_folder, model_path):
     load_path = os.path.join(load_folder, img_name)
     print(load_path)
     save_path = os.path.join(save_folder, img_name)
+    print(save_path)
     image = cv2.imread(load_path)
     image = resize_crop(image)
     batch_image = image.astype(np.float32) / 127.5 - 1
@@ -51,10 +52,28 @@ def cartoonize(img_name, load_folder, save_folder, model_path):
     output = (np.squeeze(output) + 1) * 127.5
     output = np.clip(output, 0, 255).astype(np.uint8)
     # adding watermark to image
-    logo = cv2.imread('images/pyimage.png')
-    (h_logo, w_logo) = logo.shape[:2]
-    (h, w) = output.shape[:2]
-    print(h_logo, w_logo, h, w)
+    # logo = cv2.imread('images/pyimage.png')
+    # (wH, wW) = logo.shape[:2]
+    # (h, w) = output.shape[:2]
+
+    # # output = np.dstack([output, np.ones((h, w), dtype="uint8") * 255])
+    # # overlay = np.zeros((h, w, 3), dtype="uint8")
+    # center_y = int(h / 2)
+    # center_x = int(w / 2)
+    # top_y = center_y - int(wH / 2)
+    # left_x = center_x - int(wW / 2)
+    # bottom_y = top_y + h
+    # right_x = left_x + w
+
+    # roi = output[top_y: bottom_y, left_x: right_x]
+
+    # # overlay[h - wH - 10:h - 10, w - wW - 10:w - 10] = logo
+    # # print(overlay.shape)
+    # water_output = output.copy()
+    # print(water_output.shape)
+    # print(roi.shape)
+    # result = cv2.addWeighted(roi, 0.25, water_output, 1.0, 0)
+    # img[top_y: bottom_y, left_x: right_x] = result
 
     cv2.imwrite(save_path, output)
 
@@ -90,12 +109,13 @@ def upload():
         if image_file and allowed_files(image_file.filename):
             print(image_file.filename)
             extension = os.path.splitext(image_file.filename)[1]
-            print(extension)
-            f_name = str(uuid.uuid4()) + extension
-            image_file.save(os.path.join(UPLOAD_FOLDER, f_name))
-            image_location = os.path.join(UPLOAD_FOLDER, f_name)
-            color_location = os.path.join(save_folder, f_name)
-            img_name = image_file.filename
+            img_name = str(uuid.uuid4()) + extension
+
+            image_file.save(os.path.join(UPLOAD_FOLDER, img_name))
+            image_location = os.path.join(UPLOAD_FOLDER, img_name)
+            color_location = os.path.join(save_folder, img_name)
+            
+            # pass hashed values
             cartoonize(img_name, UPLOAD_FOLDER, save_folder, model_path)
             return render_template("result.html", color_loc=img_name)
         else:
