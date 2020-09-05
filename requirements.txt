@@ -1,3 +1,2 @@
-flask
-tensorflow==1.14
-opencv-contrib-python
+flask==1.1
+opencv-python
