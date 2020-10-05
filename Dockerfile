@@ -19,4 +19,4 @@ RUN pip install scikit-build
 RUN pip install -r requirements.txt
 EXPOSE 5000
 
-ENTRYPOINT["/bin/sh", "cartoonizer/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
