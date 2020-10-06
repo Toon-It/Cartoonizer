@@ -6,6 +6,8 @@ This is a web app to make real world images to cartoon like artist drawn images.
 
 ## Installation
 
+- It's recommended to use python 🐍 version 3.7
+
 ```
 python3 -m pip install -r requirements.txt
 python3 main.py
