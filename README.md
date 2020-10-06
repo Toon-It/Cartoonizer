@@ -27,13 +27,14 @@ This project is Licensed under the CC BY-NC-SA 4.0 license (https://creativecomm
 
 ## Citation
 
-If you use this code for your research, please cite original author's [paper](https://systemerrorwang.github.io/White-box-Cartoonization/):
+If you use this code for your research, please cite original author's [paper](https://systemerrorwang.github.io/White-box-Cartoonization/).
 
-@InProceedings{Wang_2020_CVPR,
+```
+{Wang_2020_CVPR,
 author = {Wang, Xinrui and Yu, Jinze},
 title = {Learning to Cartoonize Using White-Box Cartoon Representations},
 booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
 month = {June},
 year = {2020}
 }
-
+```
