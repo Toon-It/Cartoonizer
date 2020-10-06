@@ -16,7 +16,7 @@ ADD . /cartoonizer/
 WORKDIR /cartoonizer
 RUN pip -V
 RUN pip install scikit-build
-RUN pip install -r requirements.txt
+RUN pip install -r dev-requirements.txt
 EXPOSE 5000
 
 ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
