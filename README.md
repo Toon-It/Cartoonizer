@@ -1,4 +1,5 @@
 # Toon-it
+![Python](https://img.shields.io/badge/python-3.7-green) ![Tensorflow](https://img.shields.io/badge/tensorflow-1.15.4-green) ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-important)
 
 This is a web app to make real world images to cartoon like artist drawn images. This work is based on 2020 CVPR paper: Learning to Cartoonize Using White-box Cartoon Representations and is Licensed under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), due to use of citated code of original research.
 
