@@ -17,6 +17,10 @@ python3 main.py
 localhost:5000/)
 ```
 
+- You can install with docker-compose using:
+
+`docker-compose up`
+
 You can look at your [demo here](https://github.com/Toon-It/Cartoonizer/blob/master/demo.md).
 
 This webapp was featured in top 5 📈  trending projects in [MadeWithML](https://madewithml.com/projects/2125/toonit-now/)
