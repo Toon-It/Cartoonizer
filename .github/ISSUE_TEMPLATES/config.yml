@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Do you have any specific doubts or want to contact maintainers?"
+    url: https://www.aot-technologies.com/contact-us/
+    about: Contact the maintainers through our Open source channel
