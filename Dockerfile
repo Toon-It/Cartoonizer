@@ -19,4 +19,5 @@ RUN pip install scikit-build
 RUN pip install -r dev-requirements.txt
 EXPOSE 5000
 
-ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
+# ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
+CMD ["python3", "main.py"]
