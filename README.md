@@ -3,6 +3,8 @@
 
 This is a web app to make real world images to cartoon like artist drawn images. This work is based on 2020 CVPR paper: Learning to Cartoonize Using White-box Cartoon Representations and is Licensed under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), due to use of citated code of original research.
 
+<img src='images/toonit.gif'>
+
 **Technologies used: Tensorflow, Flask, HTML**
 
 ## Installation
